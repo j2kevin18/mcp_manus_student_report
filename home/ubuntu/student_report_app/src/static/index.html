@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生习惯与表现数据分析报告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fafafa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .section h3 {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .chart-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .chart-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .chart-description {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f4fd;
+            border-radius: 5px;
+            font-style: italic;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .stat-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .conclusions {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        
+        .conclusions h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .conclusion-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>学生习惯与表现数据分析报告</h1>
+            <p>基于1000名学生数据的深度分析</p>
+        </div>
+
+        <div class="section">
+            <h2>1. 分析背景</h2>
+            <p>随着教育信息化的发展，对学生学习习惯和生活方式的深入理解变得尤为重要。本报告旨在通过分析学生的日常习惯（如学习时长、社交媒体使用、睡眠时间等）与学业表现（考试成绩）之间的关系，揭示影响学生学业成功的关键因素。</p>
+            <p>本报告的数据来源于一份包含1000名学生信息的匿名数据集，涵盖了学生的年龄、性别、学习时长、社交媒体使用时长、Netflix观看时长、是否兼职、出勤率、睡眠时长、饮食质量、运动频率、父母教育水平、网络质量、心理健康评分以及课外活动参与度等多个维度的数据。</p>
+        </div>
+
+        <div class="section">
+            <h2>2. 数据概述</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>学生总数</h4>
+                    <div class="stat-value">1000</div>
+                </div>
+                <div class="stat-card">
+                    <h4>平均年龄</h4>
+                    <div class="stat-value">20.5岁</div>
+                </div>
+                <div class="stat-card">
+                    <h4>平均考试成绩</h4>
+                    <div class="stat-value">69.6分</div>
+                </div>
+                <div class="stat-card">
+                    <h4>平均出勤率</h4>
+                    <div class="stat-value">85.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. 数据挖掘与可视化</h2>
+            
+            <h3>3.1 考试成绩分布</h3>
+            <div class="chart-container">
+                <img src="exam_score_distribution.png" alt="考试成绩分布">
+                <div class="chart-description">
+                    考试成绩大致呈正态分布，但略有偏左，说明大部分学生的成绩集中在中等偏上水平，但也存在少数高分和低分学生。
+                </div>
+            </div>
+
+            <h3>3.2 性别与考试成绩关系</h3>
+            <div class="chart-container">
+                <img src="gender_exam_score.png" alt="性别与考试成绩关系">
+                <div class="chart-description">
+                    男性和女性学生的考试成绩中位数接近，但女性学生的成绩分布略微集中，男性学生的成绩分布范围更广，表明性别对考试成绩的影响不显著。
+                </div>
+            </div>
+
+            <h3>3.3 学习时长与考试成绩关系</h3>
+            <div class="chart-container">
+                <img src="study_hours_exam_score.png" alt="学习时长与考试成绩关系">
+                <div class="chart-description">
+                    学习时长与考试成绩之间存在一定的正相关关系。通常情况下，学习时间越长的学生，考试成绩也越高。
+                </div>
+            </div>
+
+            <h3>3.4 社交媒体使用时长与考试成绩关系</h3>
+            <div class="chart-container">
+                <img src="social_media_exam_score.png" alt="社交媒体使用时长与考试成绩关系">
+                <div class="chart-description">
+                    社交媒体使用时长与考试成绩之间呈现出一定的负相关趋势。过度使用社交媒体可能会分散学生的注意力，影响学习效率。
+                </div>
+            </div>
+
+            <h3>3.5 Netflix观看时长与考试成绩关系</h3>
+            <div class="chart-container">
+                <img src="netflix_exam_score.png" alt="Netflix观看时长与考试成绩关系">
+                <div class="chart-description">
+                    Netflix观看时长与考试成绩也存在一定的负相关关系。长时间观看Netflix可能占用学生的学习时间，从而对学业表现产生负面影响。
+                </div>
+            </div>
+
+            <h3>3.6 出勤率与考试成绩关系</h3>
+            <div class="chart-container">
+                <img src="attendance_exam_score.png" alt="出勤率与考试成绩关系">
+                <div class="chart-description">
+                    出勤率与考试成绩之间存在明显的正相关关系。出勤率越高的学生，考试成绩往往也越高。这强调了课堂参与和学习连续性对学业成功的重要性。
+                </div>
+            </div>
+
+            <h3>3.7 睡眠时长与考试成绩关系</h3>
+            <div class="chart-container">
+                <img src="sleep_hours_exam_score.png" alt="睡眠时长与考试成绩关系">
+                <div class="chart-description">
+                    睡眠时长与考试成绩之间存在一定的正相关关系。充足的睡眠有助于学生保持精力充沛，提高学习效率和记忆力。
+                </div>
+            </div>
+
+            <h3>3.8 饮食质量与考试成绩关系</h3>
+            <div class="chart-container">
+                <img src="diet_quality_exam_score.png" alt="饮食质量与考试成绩关系">
+                <div class="chart-description">
+                    虽然不同饮食质量组的考试成绩存在差异，但这种差异并不十分显著。饮食质量可能对学业表现有一定影响，但并非决定性因素。
+                </div>
+            </div>
+
+            <h3>3.9 运动频率与考试成绩关系</h3>
+            <div class="chart-container">
+                <img src="exercise_frequency_exam_score.png" alt="运动频率与考试成绩关系">
+                <div class="chart-description">
+                    运动频率与考试成绩之间没有发现明显的线性关系。适度的运动有助于缓解学习压力，提高身体素质。
+                </div>
+            </div>
+
+            <h3>3.10 父母教育水平与考试成绩关系</h3>
+            <div class="chart-container">
+                <img src="parental_education_exam_score.png" alt="父母教育水平与考试成绩关系">
+                <div class="chart-description">
+                    父母教育水平与考试成绩之间存在一定的正相关关系。父母教育水平越高的学生，其考试成绩也相对较高。
+                </div>
+            </div>
+
+            <h3>3.11 心理健康评分与考试成绩关系</h3>
+            <div class="chart-container">
+                <img src="mental_health_exam_score.png" alt="心理健康评分与考试成绩关系">
+                <div class="chart-description">
+                    心理健康评分与考试成绩之间存在一定的正相关关系。心理健康状况良好的学生，其考试成绩往往也较高。
+                </div>
+            </div>
+
+            <h3>3.12 课外活动参与度与考试成绩关系</h3>
+            <div class="chart-container">
+                <img src="extracurricular_exam_score.png" alt="课外活动参与度与考试成绩关系">
+                <div class="chart-description">
+                    课外活动参与度与考试成绩之间没有发现显著的线性关系。课外活动可能对学生的综合素质发展有益，但对考试成绩的直接影响有限。
+                </div>
+            </div>
+
+            <h3>3.13 各数值变量相关性热力图</h3>
+            <div class="chart-container">
+                <img src="correlation_heatmap.png" alt="各数值变量相关性热力图">
+                <div class="chart-description">
+                    热力图通过颜色深浅展示变量间的相关系数。考试成绩与学习时长、出勤率、睡眠时长和心理健康评分呈现正相关，与社交媒体使用时长和Netflix观看时长呈现负相关。
+                </div>
+            </div>
+        </div>
+
+        <div class="conclusions">
+            <h2>4. 分析建议与结论</h2>
+            
+            <div class="conclusion-item">
+                <strong>学习时长是关键因素：</strong>学习时长与考试成绩呈正相关，表明投入足够的学习时间是取得好成绩的基础。
+            </div>
+            
+            <div class="conclusion-item">
+                <strong>不良习惯的负面影响：</strong>社交媒体和Netflix观看时长与考试成绩呈负相关，提示过度娱乐可能对学业产生负面影响。
+            </div>
+            
+            <div class="conclusion-item">
+                <strong>出勤率的重要性：</strong>出勤率与考试成绩呈显著正相关，强调了课堂参与和学习连续性的重要性。
+            </div>
+            
+            <div class="conclusion-item">
+                <strong>睡眠的积极作用：</strong>充足的睡眠对考试成绩有积极影响，但需要注意适度。
+            </div>
+            
+            <div class="conclusion-item">
+                <strong>家庭环境的影响：</strong>父母教育水平与考试成绩呈正相关，表明良好的家庭教育背景对学生学业有促进作用。
+            </div>
+            
+            <div class="conclusion-item">
+                <strong>心理健康的重要性：</strong>心理健康评分与考试成绩呈正相关，强调了学生心理健康对学业表现的深远影响。
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>报告作者：Manus AI</p>
+            <p>生成日期：2025年6月17日</p>
+        </div>
+    </div>
+</body>
+</html>
+
